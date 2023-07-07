@@ -10,7 +10,7 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
 
 ### Links
 
-- [Live Site URL: ](https://bytepack-frontendmentor-time-tracking-dashoard.pages.dev/m)
+- [Live Site URL: ](https://bytepack-frontendmentor-time-tracking-dashoard.pages.dev)
 
 
 ### Built with

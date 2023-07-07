@@ -1,0 +1,2 @@
+const e=[...document.querySelectorAll("[data-radio]")];function t(){!function(){let t=e.filter(e=>e.checked)[0],o=document.querySelector("label[for="+t.id+"]");o.innerText.toLowerCase()}()}(async function e(){try{let e=await fetch("/data.json");if(!e.ok)return console.log("Response wasn't OK!"),{};let t=await e.json();return t}catch(e){return console.log("Yo, some errors happened, err.message: ",e.message),{}}})().then(o=>{t(),e.forEach(e=>{e.addEventListener("click",t)})});
+//# sourceMappingURL=index.b49a1c26.js.map

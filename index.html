@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time tracking dashboard</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="sass/main.scss">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <div class="dashboard">
+      <div class="dashboard__header">
+        <div class="dashboard__info">
+          <img class="dashboard__img" src="images/image-jeremy.png" alt="profile">
+          <div class="dashboard__details">
+            <h2 class="dashboard__title">Report for</h2>
+            <h1 class="dashboard__name">Jeremy Robson</h1>
+          </div>
+        </div>
+        <div class="dashboard__period">
+          <input class="dashboard__period-radio" type="radio" name="radio-period" id="radio-period-daily" data-radio
+            data-radio-daily>
+          <label class="dashboard__period-item" for="radio-period-daily">Daily</label>
+          <input class="dashboard__period-radio" type="radio" name="radio-period" id="radio-period-weekly" checked
+            data-radio data-radio-weekly>
+          <label class="dashboard__period-item" for="radio-period-weekly">Weekly</label>
+          <input class="dashboard__period-radio" type="radio" name="radio-period" id="radio-period-monthly" data-radio
+            data-radio-monthly>
+          <label class="dashboard__period-item" for="radio-period-monthly">Monthly</label>
+        </div>
+      </div>
+      <ul class="dashboard__main">
+        <li class="dashboard__item dashboard__item--loading dashboard__item--work" data-item="work">
+          <img class="dashboard__icon" src="images/icon-work.svg" alt="work">
+          <div class="dashboard__report">
+            <h3 class="dashboard__subject">Work</h3>
+            <div class="dashboard__menu-icon-container">
+              <img class="dashboard__menu-icon" src="images/icon-ellipsis.svg" alt="menu">
+            </div>
+            <p class="dashboard__time">
+              <span data-time></span><span data-hrs></span>
+            </p>
+            <p class="dashboard__previous">
+              <span data-previous-title></span>
+              <span> - </span>
+              <span data-previous-time></span>
+              <span data-previous-hrs></span>
+            </p>
+          </div>
+        </li>
+
+        <li class="dashboard__item dashboard__item--loading dashboard__item--play" data-item="play">
+          <img class="dashboard__icon" src="images/icon-play.svg" alt="play">
+          <div class="dashboard__report">
+            <h3 class="dashboard__subject">Play</h3>
+            <div class="dashboard__menu-icon-container">
+              <img class="dashboard__menu-icon" src="images/icon-ellipsis.svg" alt="menu">
+            </div>
+            <p class="dashboard__time">
+              <span data-time></span><span data-hrs></span>
+            </p>
+            <p class="dashboard__previous">
+              <span data-previous-title></span>
+              <span> - </span>
+              <span data-previous-time></span>
+              <span data-previous-hrs></span>
+            </p>
+          </div>
+        </li>
+
+        <li class="dashboard__item dashboard__item--loading dashboard__item--study" data-item="study">
+          <img class="dashboard__icon" src="images/icon-study.svg" alt="study">
+          <div class="dashboard__report">
+            <h3 class="dashboard__subject">Study</h3>
+            <div class="dashboard__menu-icon-container">
+              <img class="dashboard__menu-icon" src="images/icon-ellipsis.svg" alt="menu">
+            </div>
+            <p class="dashboard__time">
+              <span data-time></span><span data-hrs></span>
+            </p>
+            <p class="dashboard__previous">
+              <span data-previous-title></span>
+              <span> - </span>
+              <span data-previous-time></span>
+              <span data-previous-hrs></span>
+            </p>
+          </div>
+        </li>
+
+        <li class="dashboard__item dashboard__item--loading dashboard__item--exercise" data-item="exercise">
+          <img class="dashboard__icon" src="images/icon-exercise.svg" alt="exercise">
+          <div class="dashboard__report">
+            <h3 class="dashboard__subject">Exercise</h3>
+            <div class="dashboard__menu-icon-container">
+              <img class="dashboard__menu-icon" src="images/icon-ellipsis.svg" alt="menu">
+            </div>
+            <p class="dashboard__time">
+              <span data-time></span><span data-hrs></span>
+            </p>
+            <p class="dashboard__previous">
+              <span data-previous-title></span>
+              <span> - </span>
+              <span data-previous-time></span>
+              <span data-previous-hrs></span>
+            </p>
+          </div>
+        </li>
+
+        <li class="dashboard__item dashboard__item--loading dashboard__item--social" data-item="social">
+          <img class="dashboard__icon" src="images/icon-social.svg" alt="social">
+          <div class="dashboard__report">
+            <h3 class="dashboard__subject">Social</h3>
+            <div class="dashboard__menu-icon-container">
+              <img class="dashboard__menu-icon" src="images/icon-ellipsis.svg" alt="menu">
+            </div>
+            <p class="dashboard__time">
+              <span data-time></span><span data-hrs></span>
+            </p>
+            <p class="dashboard__previous">
+              <span data-previous-title></span>
+              <span> - </span>
+              <span data-previous-time></span>
+              <span data-previous-hrs></span>
+            </p>
+          </div>
+        </li>
+
+        <li class="dashboard__item dashboard__item--loading dashboard__item--self-care" data-item="self care">
+          <img class="dashboard__icon" src="images/icon-self-care.svg" alt="Self Care">
+          <div class="dashboard__report">
+            <h3 class="dashboard__subject">Self Care</h3>
+            <div class="dashboard__menu-icon-container">
+              <img class="dashboard__menu-icon" src="images/icon-ellipsis.svg" alt="menu">
+            </div>
+            <p class="dashboard__time">
+              <span data-time></span><span data-hrs></span>
+            </p>
+            <p class="dashboard__previous">
+              <span data-previous-title></span>
+              <span> - </span>
+              <span data-previous-time></span>
+              <span data-previous-hrs></span>
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <!--  Work-->
+  <!--  5hrs &lt;!&ndash; daily &ndash;&gt;-->
+  <!--  Previous - 7hrs &lt;!&ndash; daily &ndash;&gt;-->
+  <!--  32hrs &lt;!&ndash; weekly &ndash;&gt;-->
+  <!--  Previous - 36hrs &lt;!&ndash; weekly &ndash;&gt;-->
+  <!--  103hrs &lt;!&ndash; monthly &ndash;&gt;-->
+  <!--  Previous - 128hrs &lt;!&ndash; monthly &ndash;&gt;-->
+
+  <!--  Play-->
+  <!--  1hr &lt;!&ndash; daily &ndash;&gt;-->
+  <!--  Previous - 2hrs &lt;!&ndash; daily &ndash;&gt;-->
+  <!--  10hrs &lt;!&ndash; weekly &ndash;&gt;-->
+  <!--  Previous - 8hrs &lt;!&ndash; weekly &ndash;&gt;-->
+  <!--  23hrs &lt;!&ndash; monthly &ndash;&gt;-->
+  <!--  Previous - 29hrs &lt;!&ndash; monthly &ndash;&gt;-->
+
+  <!--  Study-->
+  <!--  0hrs &lt;!&ndash; daily &ndash;&gt;-->
+  <!--  Previous - 1hr &lt;!&ndash; daily &ndash;&gt;-->
+  <!--  4hrs &lt;!&ndash; weekly &ndash;&gt;-->
+  <!--  Previous - 7hrs &lt;!&ndash; weekly &ndash;&gt;-->
+  <!--  13hrs &lt;!&ndash; monthly &ndash;&gt;-->
+  <!--  Previous - 19hrs &lt;!&ndash; monthly &ndash;&gt;-->
+
+  <!--  Exercise-->
+  <!--  1hr &lt;!&ndash; daily &ndash;&gt;-->
+  <!--  Previous - 1hr &lt;!&ndash; daily &ndash;&gt;-->
+  <!--  4hrs &lt;!&ndash; weekly &ndash;&gt;-->
+  <!--  Previous - 5hrs &lt;!&ndash; weekly &ndash;&gt;-->
+  <!--  11hrs &lt;!&ndash; monthly &ndash;&gt;-->
+  <!--  Previous - 18hrs &lt;!&ndash; monthly &ndash;&gt;-->
+
+  <!--  Social-->
+  <!--  1hr &lt;!&ndash; daily &ndash;&gt;-->
+  <!--  Previous - 3hrs &lt;!&ndash; daily &ndash;&gt;-->
+  <!--  5hrs &lt;!&ndash; weekly &ndash;&gt;-->
+  <!--  Previous - 10hrs &lt;!&ndash; weekly &ndash;&gt;-->
+  <!--  21hrs &lt;!&ndash; monthly &ndash;&gt;-->
+  <!--  Previous - 23hrs &lt;!&ndash; monthly &ndash;&gt;-->
+
+  <!--  Self Care-->
+  <!--  0hrs &lt;!&ndash; daily &ndash;&gt;-->
+  <!--  Previous - 1hr &lt;!&ndash; daily &ndash;&gt;-->
+  <!--  2hrs &lt;!&ndash; weekly &ndash;&gt;-->
+  <!--  Previous - 2hrs &lt;!&ndash; weekly &ndash;&gt;-->
+  <!--  7hrs &lt;!&ndash; monthly &ndash;&gt;-->
+  <!--  Previous - 11hrs &lt;!&ndash; monthly &ndash;&gt;-->
+</body>
+
+</html>
